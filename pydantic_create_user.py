@@ -34,23 +34,4 @@ class CreateUserResponseSchema(BaseModel):
     user: UserSchema
 
 
-user_request = CreateUserRequestSchema(
-    email="user@example.com",
-    lastName="Smith",
-    firstName="Alise",
-    middleName="Jane",
-    phoneNumber="+1234567890",
-)
-print("User request model:", user_request)
 
-user_response = CreateUserResponseSchema(
-    user=UserSchema(
-        id="user-id-123",
-        email="user@example.com",
-        lastName="Smith",
-        firstName="Alise",
-        middleName="Jane",
-        phoneNumber="+1234567890",
-    )
-)
-print("User response model:", user_response)
