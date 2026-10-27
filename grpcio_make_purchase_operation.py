@@ -41,7 +41,7 @@ print('Open credit card account response:', open_credit_card_account_response)
 
 make_purchase_operation_request = MakePurchaseOperationRequest(
     status=OperationStatus.OPERATION_STATUS_IN_PROGRESS,
-    amount=fake.amount(),  # Сумма покупки
+    amount=fake.amount(),
     card_id=open_credit_card_account_response.account.cards[0].id,
     category=fake.category(),
     account_id=open_credit_card_account_response.account.id
